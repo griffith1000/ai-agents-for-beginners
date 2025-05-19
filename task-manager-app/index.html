@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 3 Things To Do Today</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Top 3 Things To Do Today</h1>
+    <div id="tasks">
+        <template id="task-template">
+            <div class="task">
+                <input type="text" class="description" placeholder="Task description" />
+                <select class="duration">
+                    <option value="5">5 min</option>
+                    <option value="10">10 min</option>
+                    <option value="25">25 min</option>
+                    <option value="60">60 min</option>
+                </select>
+                <select class="penalty">
+                    <option value="1">$1</option>
+                    <option value="5">$5</option>
+                    <option value="10">$10</option>
+                    <option value="20">$20</option>
+                </select>
+                <button class="complete-btn" disabled>Completed</button>
+                <span class="timer">0:00</span>
+                <span class="status"></span>
+            </div>
+        </template>
+    </div>
+    <button id="start">Start Tasks</button>
+    <div id="total">Total Owed: $0</div>
+
+    <audio id="audio-start" src="audio/11L-music_playing_whilledoitdoit-1747694409001.mp3" preload="auto"></audio>
+    <audio id="audio-complete" src="audio/11L-a_voice_yelling_youreawesome-1747694273990.mp3" preload="auto"></audio>
+    <audio id="audio-all-complete" src="audio/11L-a_voice_yelling_youdidit_-1747694334745.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
